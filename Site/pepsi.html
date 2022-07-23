@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/pepsi.css">
+    <title>Pepsi</title>
+</head>
+<body>
+
+    <section class="sec">
+        <header>
+            <a href="index-2.html"><img src="./imagens/pepsi_logo.png" class="logo"></a>
+            <div class="menu" onclick="Menu();"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">O que há de novo?</a></li>
+                <li><a href="#">Informações</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </header>
+
+        <div class="content">
+            <div class="textBox">
+                <h2>Pepsi, sim ou<br><span>Claro?</span></h2>
+                <p>O produto que deu origem à marca de refrigerantes Pepsi-Cola 
+                   foi criado no ano de 1893, no estado da Carolina do Norte nos Estados Unidos. 
+                   Seu criador, o farmacêutico Caleb Davis Bradham, formulou um medicamento 
+                   inicialmente sugerido para combater a dispepsia, uma doença causada pela falta 
+                   da enzima pepsina no organismo, dando o nome de “Brad's Drink” (bebida de Brad).</p>
+                   <a href="#">Ver todos os produtos</a>
+            </div>
+
+            <div class="imgBox">
+                <img src="./imagens/pepsi001.png" class="pepsi">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="./imagens/pepsi001.png" onclick="imgSlider('./imagens/pepsi001.png');changeColor('#0062be')"></li>
+            <li><img src="./imagens/pepsi002.png" onclick="imgSlider('./imagens/pepsi002.png');changeColor('#9c9c9c')"></li>
+            <li><img src="./imagens/pepsi003.png" onclick="imgSlider('./imagens/pepsi003.png');changeColor('#1e1e1e')"></li>
+        </ul>
+
+        <ul class="sci">
+            <li><a href="https://pt-br.facebook.com/PepsiBrasil/"><img src="./imagens/facebook.png"></a></li>
+            <li><a href="https://www.instagram.com/pepsibr/"><img src="./imagens/instagram.png"></a></li>
+            <li><a href="https://twitter.com/pepsibr"><img src="./imagens/twitter.png"></a></li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.pepsi').src = anything;
+        }
+        function changeColor(color){
+            const sec = document.querySelector('.sec');
+            sec.style.background = color;
+        }
+        function Menu(){
+            const menu = document.querySelector('.menu');
+            const navigation = document.querySelector('.navigation');
+            menu.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+    </div>
+</body>
+</html>
